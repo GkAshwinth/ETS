@@ -57,8 +57,7 @@ namespace ETS
             return events;
         }
 
-        // Purchase Ticket (insert into AttendeeTickets)
-        public bool PurchaseTicket(int userId, int ticketId)
+        public bool RegisterForEvent(int userId, int ticketId)
         {
             string query = $"INSERT INTO AttendeeTickets (userId, ticketId) VALUES ({userId}, {ticketId})";
 
@@ -68,26 +67,52 @@ namespace ETS
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error purchasing ticket: " + ex.Message);
+                MessageBox.Show("Error registering for event: " + ex.Message);
+                return false;
+            }
+        }
+        public bool UnregisterFromEvent(int userId, int ticketId)
+        {
+            string query = $"DELETE FROM AttendeeTickets WHERE userId = {userId} AND ticketId = {ticketId}";
+
+            try
+            {
+                return connection.ExecuteNonQuery(query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error unregistering from event: " + ex.Message);
                 return false;
             }
         }
 
-        // View My Tickets (joined view)
-        public DataTable ViewMyTickets(int userId)
+        public int? GetTicketIdByEvent(int eventId)
+        {
+            string query = $"SELECT ticketId FROM Ticket WHERE eventId = {eventId} LIMIT 1";
+            DataTable dt = connection.ExecuteQuery(query);
+
+            if (dt.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dt.Rows[0]["ticketId"]);
+            }
+            else
+            {
+                return null; // No ticket found
+            }
+        }
+
+        public DataTable GetMyTickets(int userId)
         {
             string query = @"
-                SELECT 
-                    e.name AS EventName,
-                    t.type AS TicketType,
-                    p.status AS PaymentStatus,
-                    p.amount AS PaidAmount,
-                    e.date AS EventDate
-                FROM AttendeeTickets at
-                JOIN Ticket t ON at.ticketId = t.ticketId
-                JOIN Event e ON t.eventId = e.eventId
-                LEFT JOIN Payment p ON p.userId = at.userId
-                WHERE at.userId = " + userId;
+        SELECT 
+            e.name AS EventName,
+            t.type AS TicketType,
+            e.date AS EventDate,
+            t.price AS TicketPrice
+        FROM AttendeeTickets at
+        JOIN Ticket t ON at.ticketId = t.ticketId
+        JOIN Event e ON t.eventId = e.eventId
+        WHERE at.userId = " + userId;
 
             return connection.ExecuteQuery(query);
         }

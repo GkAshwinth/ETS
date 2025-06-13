@@ -19,25 +19,50 @@ namespace ETS
 
         private void btnLogic_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
+            string username = txtUsername.Text.Trim();  // This is actually email
             string password = txtPassword.Text;
 
-            // Check if username exists and password matches
-            if (FakeDatabase.Users.TryGetValue(username, out string savedPassword))
+            Database db = new Database();
+            string query = $"SELECT * FROM Users WHERE email = '{username}'";
+
+            try
             {
-                if (password == savedPassword) // Simple comparison (no hashing)
+                DataTable result = db.ExecuteQuery(query);
+
+                if (result.Rows.Count == 1)
                 {
-                    MessageBox.Show("Login success!");
-                    this.Close(); // Close login form
+                    string savedPassword = result.Rows[0]["password"].ToString();
+
+                    if (password == savedPassword)
+                    {
+                        MessageBox.Show("Login success!");
+                        this.Hide();
+
+                        string role = result.Rows[0]["role"].ToString();
+                        int loggedInUserId = Convert.ToInt32(result.Rows[0]["id"]); //REMEMBER
+
+                        if (role == "Attendee")
+                        {
+                            new AttendeeUI().Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Logged in as {role}.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong password!");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Wrong password!");
+                    MessageBox.Show("Username not found!");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Username not found!");
+                MessageBox.Show("Error during login: " + ex.Message);
             }
         }
 

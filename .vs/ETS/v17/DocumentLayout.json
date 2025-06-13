@@ -1,13 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\chira\\OneDrive\\Desktop\\ETS SDAM 2\\ETS\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\chira\\onedrive\\desktop\\ets sdam 2\\ets\\ets\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\ets sdam 2 assignment\\ets\\ets\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\ets sdam 2 assignment\\ets\\ets\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\ets sdam 2 assignment\\ets\\ets\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\ets sdam 2 assignment\\ets\\ets\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\ets sdam 2 assignment\\ets\\ets\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\ets sdam 2 assignment\\ets\\ets\\attendeeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\attendeeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\ets sdam 2 assignment\\ets\\ets\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\ets sdam 2 assignment\\ets\\ets\\attendeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\attendeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\ets sdam 2 assignment\\ets\\ets\\attendee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\attendee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\ets sdam 2 assignment\\ets\\ets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\ets sdam 2 assignment\\ets\\ets\\attendeeviewandregisterui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\attendeeviewandregisterui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\ets sdam 2 assignment\\ets\\ets\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|C:\\Users\\chira\\OneDrive\\Desktop\\ETS SDAM 2\\ETS\\ets\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ets\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,15 +62,178 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "RegisterForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "ETS\\RegisterForm.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\RegisterForm.cs [Design]",
+              "RelativeToolTip": "ETS\\RegisterForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:55:55.398Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\LoginForm.cs",
+              "RelativeDocumentMoniker": "ETS\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\LoginForm.cs [Design]",
+              "RelativeToolTip": "ETS\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:52:28.906Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\LoginForm.Designer.cs",
+              "RelativeDocumentMoniker": "ETS\\LoginForm.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\LoginForm.Designer.cs",
+              "RelativeToolTip": "ETS\\LoginForm.Designer.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAFgAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:52:00.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AttendeeUI.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\AttendeeUI.cs",
+              "RelativeDocumentMoniker": "ETS\\AttendeeUI.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\AttendeeUI.cs [Design]",
+              "RelativeToolTip": "ETS\\AttendeeUI.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:51:22.799Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegisterForm.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "ETS\\RegisterForm.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\RegisterForm.cs",
+              "RelativeToolTip": "ETS\\RegisterForm.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:47:23.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\LoginForm.cs",
+              "RelativeDocumentMoniker": "ETS\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\LoginForm.cs",
+              "RelativeToolTip": "ETS\\LoginForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:47:15.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\Database.cs",
+              "RelativeDocumentMoniker": "ETS\\Database.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\Database.cs",
+              "RelativeToolTip": "ETS\\Database.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwGAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:41:19.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Attendee.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\Attendee.cs",
+              "RelativeDocumentMoniker": "ETS\\Attendee.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\Attendee.cs",
+              "RelativeToolTip": "ETS\\Attendee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:41:04.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\Program.cs",
+              "RelativeDocumentMoniker": "ETS\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\Program.cs",
+              "RelativeToolTip": "ETS\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:40:29.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AttendeeViewAndRegisterUI.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\AttendeeViewAndRegisterUI.cs",
+              "RelativeDocumentMoniker": "ETS\\AttendeeViewAndRegisterUI.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\AttendeeViewAndRegisterUI.cs [Design]",
+              "RelativeToolTip": "ETS\\AttendeeViewAndRegisterUI.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:40:24.581Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AttendeeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\AttendeeController.cs",
+              "RelativeDocumentMoniker": "ETS\\AttendeeController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\AttendeeController.cs",
+              "RelativeToolTip": "ETS\\AttendeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:40:03.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\chira\\OneDrive\\Desktop\\ETS SDAM 2\\ETS\\ETS\\MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\MainForm.cs",
               "RelativeDocumentMoniker": "ETS\\MainForm.cs",
-              "ToolTip": "C:\\Users\\chira\\OneDrive\\Desktop\\ETS SDAM 2\\ETS\\ETS\\MainForm.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\MainForm.cs",
               "RelativeToolTip": "ETS\\MainForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAD4vwoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -35,11 +242,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\chira\\OneDrive\\Desktop\\ETS SDAM 2\\ETS\\ETS\\MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\MainForm.cs",
               "RelativeDocumentMoniker": "ETS\\MainForm.cs",
-              "ToolTip": "C:\\Users\\chira\\OneDrive\\Desktop\\ETS SDAM 2\\ETS\\ETS\\MainForm.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\ETS SDAM 2 Assignment\\ETS\\ETS\\MainForm.cs [Design]",
               "RelativeToolTip": "ETS\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T15:25:02.129Z",
