@@ -16,7 +16,7 @@ namespace ETS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Intial Commit
+            Application.Run(new MainForm());
         }
     }
 }

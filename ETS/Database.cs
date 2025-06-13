@@ -1,4 +1,15 @@
 ﻿using System;
+<<<<<<< HEAD
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ETS
+{
+    class Database
+    {
+=======
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -96,5 +107,6 @@ namespace ETS
         {
             return connection;
         }
+>>>>>>> 3d206b5a789be2524e67117460c6bb69055b4620
     }
 }
