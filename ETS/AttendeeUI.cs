@@ -12,21 +12,23 @@ namespace ETS
 {
     public partial class AttendeeUI: Form
     {
-        public AttendeeUI()
+        private int loggedInUserId;
+        public AttendeeUI(int UserId)
         {
             InitializeComponent();
+            this.loggedInUserId = UserId;
         }
 
         private void ViewAndRegisterButton_Click(object sender, EventArgs e)
         {
-            AttendeeViewAndRegisterUI viewAndRegisterUI = new AttendeeViewAndRegisterUI();
+            AttendeeViewAndRegisterUI viewAndRegisterUI = new AttendeeViewAndRegisterUI(loggedInUserId);
             viewAndRegisterUI.Show();
             this.Hide();
         }
 
         private void ManageMyTicketsButton_Click(object sender, EventArgs e)
         {
-            AttendeeManageTickets manageTicketsUI = new AttendeeManageTickets();
+            AttendeeManageTickets manageTicketsUI = new AttendeeManageTickets(loggedInUserId);
             manageTicketsUI.Show();
             this.Hide();
         }

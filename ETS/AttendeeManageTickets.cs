@@ -12,16 +12,18 @@ namespace ETS
 {
     public partial class AttendeeManageTickets: Form
     {
-        public AttendeeManageTickets()
+        private int loggedInUserId;
+        public AttendeeManageTickets(int UserId)
         {
             InitializeComponent();
+            this.loggedInUserId = UserId;
         }
         private AttendeeController attendeeController = new AttendeeController();
-        private int userId; // CHANGE THIS AFTER GETTING LOGGED IN ID PASSED THROUGH
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            AttendeeUI attendeeUI = new AttendeeUI();
+            AttendeeUI attendeeUI = new AttendeeUI(loggedInUserId);
+            MessageBox.Show($"{loggedInUserId}");
             attendeeUI.Show();
             this.Hide();
         }
@@ -37,7 +39,7 @@ namespace ETS
                 return;
             }
 
-            bool result = attendeeController.UnregisterFromEvent(userId, ticketId);
+            bool result = attendeeController.UnregisterFromEvent(loggedInUserId, ticketId);
 
             if (result)
             {
@@ -51,7 +53,7 @@ namespace ETS
         }
         private void LoadMyTickets()
         {
-            DataTable tickets = attendeeController.GetMyTickets(userId);
+            DataTable tickets = attendeeController.GetMyTickets(loggedInUserId);
             MyTicketsDataGrid.DataSource = tickets;
         }
 
