@@ -100,7 +100,7 @@
   <ItemGroup>
     <Compile Include="Attendee.cs" />
     <Compile Include="AttendeeController.cs" />
-    <Compile Include="DBconnection.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -12,37 +12,36 @@ namespace ETS
 {
     internal class AttendeeController
     {
-        private DBconnection connection;
+        private Database connection;
 
         public AttendeeController()
         {
-            connection = new DBconnection();
+            connection = new Database();
         }
 
         // View Events
         public List<Event> GetAllEvents()
         {
             List<Event> events = new List<Event>();
-            string query = "SELECT * FROM events";
+            string query = "SELECT * FROM Event";
 
             try
             {
-                if (connection.OpenConnection())
+                MySqlConnection conn = connection.OpenConnection();
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
-                    using (MySqlCommand cmd = new MySqlCommand(query, connection.GetConnection()))
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    while (reader.Read())
                     {
-                        while (reader.Read())
+                        events.Add(new Event
                         {
-                            events.Add(new Event
-                            {
-                                EventID = Convert.ToInt32(reader["EventID"]),
-                                Name = reader["Name"].ToString(),
-                                Date = Convert.ToDateTime(reader["Date"]),
-                                Location = reader["Location"].ToString(),
-                                Description = reader["Description"].ToString()
-                            });
+                            EventID = Convert.ToInt32(reader["eventId"]),
+                            Name = reader["name"].ToString(),
+                            Date = Convert.ToDateTime(reader["date"]),
+                            Location = reader["location"].ToString(),
+                            Description = reader["description"].ToString()
                         }
+                        );
                     }
                 }
             }
@@ -58,54 +57,39 @@ namespace ETS
             return events;
         }
 
-        // Updated Purchase Ticket method to fix CS0029 error
-        public bool PurchaseTicket(int attendeeID, int eventID, int ticketTypeID, int quantity)
+        // Purchase Ticket (insert into AttendeeTickets)
+        public bool PurchaseTicket(int userId, int ticketId)
         {
-            string query = $"INSERT INTO bookings (AttendeeID, EventID, TicketTypeID, Quantity, BookingDate) " +
-                           $"VALUES ({attendeeID}, {eventID}, {ticketTypeID}, {quantity}, NOW())";
+            string query = $"INSERT INTO AttendeeTickets (userId, ticketId) VALUES ({userId}, {ticketId})";
 
             try
             {
-                connection.ExecuteQuery(query); // ExecuteQuery is void, so no return value
-                return true; // Return true if the query executes successfully
+                return connection.ExecuteNonQuery(query);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error purchasing ticket: " + ex.Message);
-                return false; // Return false if an exception occurs
+                return false;
             }
         }
 
-        // View Purchased Tickets
-        public DataTable ViewMyTickets(int attendeeID)
+        // View My Tickets (joined view)
+        public DataTable ViewMyTickets(int userId)
         {
-            DataTable dt = new DataTable();
-            string query = $"SELECT b.BookingID, e.Name AS EventName, t.TypeName, b.Quantity, b.BookingDate " +
-                           $"FROM bookings b " +
-                           $"JOIN events e ON b.EventID = e.EventID " +
-                           $"JOIN tickettypes t ON b.TicketTypeID = t.TicketTypeID " +
-                           $"WHERE b.AttendeeID = {attendeeID}";
+            string query = @"
+                SELECT 
+                    e.name AS EventName,
+                    t.type AS TicketType,
+                    p.status AS PaymentStatus,
+                    p.amount AS PaidAmount,
+                    e.date AS EventDate
+                FROM AttendeeTickets at
+                JOIN Ticket t ON at.ticketId = t.ticketId
+                JOIN Event e ON t.eventId = e.eventId
+                LEFT JOIN Payment p ON p.userId = at.userId
+                WHERE at.userId = " + userId;
 
-            try
-            {
-                if (connection.OpenConnection())
-                {
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection.GetConnection()))
-                    {
-                        adapter.Fill(dt);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error retrieving tickets: " + ex.Message);
-            }
-            finally
-            {
-                connection.CloseConnection();
-            }
-
-            return dt;
+            return connection.ExecuteQuery(query);
         }
     }
 }
