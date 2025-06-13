@@ -43,7 +43,7 @@ namespace ETS
 
                         if (role == "Attendee")
                         {
-                            new AttendeeUI().Show();
+                            new AttendeeUI(loggedInUserId).Show();
                         }
                         else
                         {

@@ -13,13 +13,12 @@ namespace ETS
     public partial class AttendeeViewAndRegisterUI: Form
     {
         AttendeeController attendeeController = new AttendeeController();
-        public AttendeeViewAndRegisterUI()
+        private int loggedInUserId;
+        public AttendeeViewAndRegisterUI(int UserId)
         {
             InitializeComponent();
+            this.loggedInUserId = UserId;
         }
-        //ONCE LOGIN CODE IS DONE CHANGE THIS SO IT TAKES USERID FROM LOGIN DIRECTLY
-        public int userId { get; set; }
-        //REMEMBER
 
         private void LoadAvailableEvents()
         {
@@ -43,7 +42,8 @@ namespace ETS
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            AttendeeUI attendeeUI = new AttendeeUI();
+            AttendeeUI attendeeUI = new AttendeeUI(loggedInUserId);
+            MessageBox.Show($"{loggedInUserId}");
             attendeeUI.Show();
             this.Hide();
         }
@@ -52,13 +52,13 @@ namespace ETS
         {
             if (AvailableEventsDataGrid.SelectedRows.Count > 0)
             {
-                int selectedEventId = Convert.ToInt32(AvailableEventsDataGrid.SelectedRows[0].Cells["eventId"].Value);
+                int selectedEventId = Convert.ToInt32(AvailableEventsDataGrid.SelectedRows[0].Cells["EventID"].Value);
 
                 int? ticketId = attendeeController.GetTicketIdByEvent(selectedEventId);
 
                 if (ticketId.HasValue)
                 {
-                    bool success = attendeeController.RegisterForEvent(userId, ticketId.Value);
+                    bool success = attendeeController.RegisterForEvent(loggedInUserId, ticketId.Value);
 
                     if (success)
                         MessageBox.Show("Successfully registered for the event!");
