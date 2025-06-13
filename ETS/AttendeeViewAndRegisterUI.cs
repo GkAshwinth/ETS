@@ -52,7 +52,7 @@ namespace ETS
         {
             if (AvailableEventsDataGrid.SelectedRows.Count > 0)
             {
-                int selectedEventId = Convert.ToInt32(AvailableEventsDataGrid.SelectedRows[0].Cells["eventId"].Value);
+                int selectedEventId = Convert.ToInt32(AvailableEventsDataGrid.SelectedRows[0].Cells["EventID"].Value);
 
                 int? ticketId = attendeeController.GetTicketIdByEvent(selectedEventId);
 

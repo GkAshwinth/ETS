@@ -61,6 +61,7 @@
             this.ManageMyTicketsButton.TabIndex = 2;
             this.ManageMyTicketsButton.Text = "Manage My Tickets";
             this.ManageMyTicketsButton.UseVisualStyleBackColor = true;
+            this.ManageMyTicketsButton.Click += new System.EventHandler(this.ManageMyTicketsButton_Click);
             // 
             // AttendeeUI
             // 

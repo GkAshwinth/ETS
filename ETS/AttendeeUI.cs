@@ -23,5 +23,10 @@ namespace ETS
             viewAndRegisterUI.Show();
             this.Hide();
         }
+
+        private void ManageMyTicketsButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
