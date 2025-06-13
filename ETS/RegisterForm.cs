@@ -19,20 +19,46 @@ namespace ETS
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string username = txtNewUsername.Text;
+            string username = txtNewUsername.Text.Trim(); // Used as email
             string password = txtNewPassword.Text;
 
-            if (FakeDatabase.Users.ContainsKey(username))
+            Database db = new Database();
+
+            try
             {
-                MessageBox.Show("Username already exists!");
+                // Check if the email already exists
+                string checkQuery = $"SELECT * FROM Users WHERE email = '{username}'";
+                DataTable result = db.ExecuteQuery(checkQuery);
+
+                if (result.Rows.Count > 0)
+                {
+                    MessageBox.Show("Username (email) already exists!");
+                }
+                else
+                {
+                    // Default role: Attendee
+                    string insertQuery = $"INSERT INTO Users (name, email, password, phone, role) " +
+                                         $"VALUES ('{username}', '{username}', '{password}', '', 'Attendee')";
+
+                    bool success = db.ExecuteNonQuery(insertQuery);
+
+                    if (success)
+                    {
+                        MessageBox.Show("Registration success!");
+                        this.Close(); // Close the registration form
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registration failed. Try again.");
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                FakeDatabase.Users.Add(username, password); // Store plain password (not secure)
-                MessageBox.Show("Registration success!");
-                this.Close();
+                MessageBox.Show("Error during registration: " + ex.Message);
             }
         }
+
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

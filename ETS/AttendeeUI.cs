@@ -16,5 +16,12 @@ namespace ETS
         {
             InitializeComponent();
         }
+
+        private void ViewAndRegisterButton_Click(object sender, EventArgs e)
+        {
+            AttendeeViewAndRegisterUI viewAndRegisterUI = new AttendeeViewAndRegisterUI();
+            viewAndRegisterUI.Show();
+            this.Hide();
+        }
     }
 }
