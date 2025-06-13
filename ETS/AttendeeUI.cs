@@ -26,7 +26,9 @@ namespace ETS
 
         private void ManageMyTicketsButton_Click(object sender, EventArgs e)
         {
-
+            AttendeeManageTickets manageTicketsUI = new AttendeeManageTickets();
+            manageTicketsUI.Show();
+            this.Hide();
         }
     }
 }
