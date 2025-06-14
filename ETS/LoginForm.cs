@@ -27,8 +27,6 @@ namespace ETS
                 MessageBox.Show("✅ Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Hide();
-
-                // Optional: Pass loggedInUser to MainForm if needed
                 new MainForm(loggedInUser).Show();
             }
             else
@@ -37,10 +35,10 @@ namespace ETS
             }
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void linkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            new RegisterForm().Show();  // No need to pass controller if it is created internally
+            new RegisterForm().Show();
         }
     }
 }

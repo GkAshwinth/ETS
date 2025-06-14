@@ -2,30 +2,17 @@
 {
     partial class LoginForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.lblLoginTitle = new System.Windows.Forms.Label();
@@ -33,7 +20,7 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnLogic = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.linkRegister = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
@@ -68,25 +55,26 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(573, 164);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(100, 31);
+            this.txtUsername.Size = new System.Drawing.Size(200, 31);
             this.txtUsername.TabIndex = 3;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(573, 286);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 31);
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(200, 31);
             this.txtPassword.TabIndex = 4;
             // 
-            // btnLogic
+            // btnLogin
             // 
-            this.btnLogic.Location = new System.Drawing.Point(428, 427);
-            this.btnLogic.Name = "btnLogic";
-            this.btnLogic.Size = new System.Drawing.Size(134, 48);
-            this.btnLogic.TabIndex = 5;
-            this.btnLogic.Text = "LOGIN";
-            this.btnLogic.UseVisualStyleBackColor = true;
-            this.btnLogic.Click += new System.EventHandler(this.btnLogic_Click);
+            this.btnLogin.Location = new System.Drawing.Point(428, 427);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(134, 48);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // linkRegister
             // 
@@ -96,7 +84,7 @@
             this.linkRegister.Size = new System.Drawing.Size(324, 25);
             this.linkRegister.TabIndex = 6;
             this.linkRegister.TabStop = true;
-            this.linkRegister.Text = "Don\'t have an account? Register";
+            this.linkRegister.Text = "Don't have an account? Register";
             this.linkRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRegister_LinkClicked);
             // 
             // LoginForm
@@ -105,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 674);
             this.Controls.Add(this.linkRegister);
-            this.Controls.Add(this.btnLogic);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblPassword);
@@ -113,10 +101,8 @@
             this.Controls.Add(this.lblLoginTitle);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -126,7 +112,7 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnLogic;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.LinkLabel linkRegister;
     }
 }

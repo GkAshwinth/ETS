@@ -2,7 +2,6 @@
 using ETS.Models;
 using System;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace ETS
 {
@@ -17,7 +16,6 @@ namespace ETS
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            // Validate input (optional but recommended)
             if (string.IsNullOrWhiteSpace(txtEmail.Text) ||
                 string.IsNullOrWhiteSpace(txtName.Text) ||
                 string.IsNullOrWhiteSpace(txtPassword.Text) ||
@@ -37,7 +35,6 @@ namespace ETS
                 Role = cmbRole.Text
             };
 
-
             if (userController.Register(newUser))
             {
                 MessageBox.Show("✅ Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -48,6 +45,12 @@ namespace ETS
             {
                 MessageBox.Show("❌ Email already exists", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            new LoginForm().Show();
         }
     }
 }
