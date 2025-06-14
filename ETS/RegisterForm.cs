@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ETS.Controllers;
+using ETS.Models;
+using System;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ETS
 {
     public partial class RegisterForm : Form
     {
+        private readonly UserController userController = new UserController();
+
         public RegisterForm()
         {
             InitializeComponent();
@@ -19,26 +17,36 @@ namespace ETS
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string username = txtNewUsername.Text;
-            string password = txtNewPassword.Text;
-
-            if (FakeDatabase.Users.ContainsKey(username))
+            // Validate input (optional but recommended)
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                string.IsNullOrWhiteSpace(txtName.Text) ||
+                string.IsNullOrWhiteSpace(txtPassword.Text) ||
+                string.IsNullOrWhiteSpace(txtPhone.Text) ||
+                string.IsNullOrWhiteSpace(cmbRole.Text))
             {
-                MessageBox.Show("Username already exists!");
+                MessageBox.Show("⚠️ Please fill in all fields", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var newUser = new User
+            {
+                Email = txtEmail.Text.Trim(),
+                Name = txtName.Text.Trim(),
+                Password = txtPassword.Text,
+                PhoneNumber = txtPhone.Text.Trim(),
+                Role = cmbRole.Text
+            };
+
+            if (userController.Register(newUser))
+            {
+                MessageBox.Show("✅ Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                new LoginForm().Show();
             }
             else
             {
-                FakeDatabase.Users.Add(username, password); // Store plain password (not secure)
-                MessageBox.Show("Registration success!");
-                this.Close();
+                MessageBox.Show("❌ Email already exists", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Hide();
         }
     }
 }

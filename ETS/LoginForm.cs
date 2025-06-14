@@ -1,56 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ETS.Controllers;
+using ETS.Models;
+using System;
 using System.Windows.Forms;
 
 namespace ETS
 {
     public partial class LoginForm : Form
     {
+        private readonly UserController userController = new UserController();
+
         public LoginForm()
         {
             InitializeComponent();
         }
 
-        private void btnLogic_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
+            string email = txtUsername.Text.Trim();
             string password = txtPassword.Text;
 
-            // Check if username exists and password matches
-            if (FakeDatabase.Users.TryGetValue(username, out string savedPassword))
+            // Attempt login using UserController
+            User loggedInUser = userController.Login(email, password);
+
+            if (loggedInUser != null)
             {
-                if (password == savedPassword) // Simple comparison (no hashing)
-                {
-                    MessageBox.Show("Login success!");
-                    this.Close(); // Close login form
-                }
-                else
-                {
-                    MessageBox.Show("Wrong password!");
-                }
+                MessageBox.Show("✅ Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Hide();
+
+                // Optional: Pass loggedInUser to MainForm if needed
+                new MainForm(loggedInUser).Show();
             }
             else
             {
-                MessageBox.Show("Username not found!");
+                MessageBox.Show("❌ Invalid credentials", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void linkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
-            RegisterForm registerForm = new RegisterForm();
-            registerForm.Show();
             this.Hide();
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
+            new RegisterForm().Show();  // No need to pass controller if it is created internally
         }
     }
 }
