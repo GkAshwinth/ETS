@@ -37,6 +37,7 @@ namespace ETS
                 Role = cmbRole.Text
             };
 
+
             if (userController.Register(newUser))
             {
                 MessageBox.Show("✅ Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
