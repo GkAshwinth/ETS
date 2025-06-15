@@ -56,14 +56,34 @@ namespace ETS
             return events;
         }
 
-        // ✅ Register for event
+        //Register for event
         public bool RegisterForEvent(int userId, int ticketId)
         {
-            string query = $"INSERT INTO AttendeeTickets (userId, ticketId) VALUES ({userId}, {ticketId})";
+            // First get eventId from the ticketId
+            string getEventQuery = $"SELECT eventId FROM Ticket WHERE ticketId = {ticketId}";
+            DataTable dt = connection.ExecuteQuery(getEventQuery);
+
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Invalid ticket.");
+                return false;
+            }
+
+            int eventId = Convert.ToInt32(dt.Rows[0]["eventId"]);
+
+            // Check if user is already registered for this event
+            if (IsUserRegisteredForEvent(userId, eventId))
+            {
+                MessageBox.Show("You are already registered for this event.");
+                return false;
+            }
+
+            // Proceed to insert registration
+            string insertQuery = $"INSERT INTO AttendeeTickets (userId, ticketId) VALUES ({userId}, {ticketId})";
 
             try
             {
-                return connection.ExecuteNonQuery(query);
+                return connection.ExecuteNonQuery(insertQuery);
             }
             catch (Exception ex)
             {
@@ -72,7 +92,8 @@ namespace ETS
             }
         }
 
-        // ✅ Unregister from event
+
+        //Unregister from event
         public bool UnregisterFromEvent(int userId, int ticketId)
         {
             string query = $"DELETE FROM AttendeeTickets WHERE userId = {userId} AND ticketId = {ticketId}";
@@ -119,5 +140,23 @@ namespace ETS
 
             return connection.ExecuteQuery(query);
         }
+
+        public bool IsUserRegisteredForEvent(int userId, int eventId)
+        {
+            string query = $@"
+        SELECT COUNT(*) AS count FROM AttendeeTickets at
+        JOIN Ticket t ON at.ticketId = t.ticketId
+        WHERE at.userId = {userId} AND t.eventId = {eventId}";
+
+            DataTable dt = connection.ExecuteQuery(query);
+
+            if (dt.Rows.Count > 0)
+            {
+                int count = Convert.ToInt32(dt.Rows[0]["count"]);
+                return count > 0;
+            }
+            return false;
+        }
+
     }
 }
