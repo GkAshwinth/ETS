@@ -88,7 +88,6 @@ namespace ETS
             }
         }
 
-        // ✅ Get ticket ID by Event
         public int? GetTicketIdByEvent(int eventId)
         {
             string query = $"SELECT ticketId FROM Ticket WHERE eventId = {eventId} LIMIT 1";
@@ -104,19 +103,19 @@ namespace ETS
             }
         }
 
-        // ✅ Get My Tickets
         public DataTable GetMyTickets(int userId)
         {
-            string query = @"
-                SELECT 
-                    e.name AS EventName,
-                    t.type AS TicketType,
-                    e.date AS EventDate,
-                    t.price AS TicketPrice
-                FROM AttendeeTickets at
-                JOIN Ticket t ON at.ticketId = t.ticketId
-                JOIN event e ON t.eventId = e.eventId
-                WHERE at.userId = " + userId;
+            string query = $@"
+            SELECT 
+                e.eventId AS EventID,
+                e.name AS EventName,
+                t.type AS TicketType,
+                e.date AS EventDate,
+                t.price AS TicketPrice
+            FROM AttendeeTickets at
+            JOIN Ticket t ON at.ticketId = t.ticketId
+            JOIN event e ON t.eventId = e.eventId
+            WHERE at.userId = {userId}";
 
             return connection.ExecuteQuery(query);
         }
