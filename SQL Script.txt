@@ -1,0 +1,113 @@
+-- Create and select the database
+CREATE DATABASE IF NOT EXISTS event_ticketing_system;
+USE event_ticketing_system;
+
+-- ----------------------------
+-- Users Table
+-- ----------------------------
+CREATE TABLE Users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    phone VARCHAR(15),
+    role ENUM('Admin', 'Attendee', 'EventManager') NOT NULL
+);
+
+-- ----------------------------
+-- Events Table
+-- ----------------------------
+CREATE TABLE Event (
+    eventId INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    date DATE NOT NULL,
+    location VARCHAR(255),
+    noOfTickets INT NOT NULL,
+    createdBy INT NOT NULL,
+    FOREIGN KEY (createdBy) REFERENCES Users(id) ON DELETE CASCADE
+);
+
+-- ----------------------------
+-- Tickets Table
+-- ----------------------------
+CREATE TABLE Ticket (
+    ticketId INT AUTO_INCREMENT PRIMARY KEY,
+    type VARCHAR(50) NOT NULL,
+    price DOUBLE NOT NULL,
+    availability BOOLEAN DEFAULT TRUE,
+    eventId INT NOT NULL,
+    FOREIGN KEY (eventId) REFERENCES Event(eventId) ON DELETE CASCADE
+);
+
+-- ----------------------------
+-- Payments Table
+-- ----------------------------
+CREATE TABLE Payment (
+    paymentId INT AUTO_INCREMENT PRIMARY KEY,
+    userId INT NOT NULL,
+    amount DOUBLE NOT NULL,
+    status VARCHAR(50) DEFAULT 'Pending',
+    type VARCHAR(50),
+    FOREIGN KEY (userId) REFERENCES Users(id) ON DELETE CASCADE
+);
+
+-- ----------------------------
+-- AttendeeTickets Table
+-- ----------------------------
+CREATE TABLE AttendeeTickets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    userId INT NOT NULL,
+    ticketId INT NOT NULL,
+    FOREIGN KEY (userId) REFERENCES Users(id) ON DELETE CASCADE,
+    FOREIGN KEY (ticketId) REFERENCES Ticket(ticketId) ON DELETE CASCADE
+);
+
+-- ----------------------------
+-- Insert Users
+-- ----------------------------
+INSERT INTO Users (name, email, password, phone, role) VALUES
+('Alice Admin', 'admin@example.com', 'admin123', '0771234567', 'Admin'),
+('Eve Manager', 'eve.manager@example.com', 'evepass', '0772345678', 'EventManager'),
+('Max Organizer', 'max.organizer@example.com', 'maxpass', '0773456789', 'EventManager'),
+('Tom Attendee', 'tom@example.com', 'tom123', '0774567890', 'Attendee'),
+('Sara Attendee', 'sara@example.com', 'sara123', '0775678901', 'Attendee');
+
+-- ----------------------------
+-- Insert Events
+-- ----------------------------
+INSERT INTO Event (name, date, location, noOfTickets, createdBy) VALUES
+('Music Festival 2025', '2025-08-15', 'Colombo Grounds', 100, 2),
+('Tech Conference', '2025-09-10', 'BMICH', 50, 3),
+('Food Carnival', '2025-07-20', 'Galle Face', 120, 2),
+('Startup Expo', '2025-10-05', 'SLIIT Auditorium', 80, 3),
+('Book Fair', '2025-06-25', 'Nelum Pokuna', 150, 2);
+
+-- ----------------------------
+-- Insert Tickets
+-- ----------------------------
+INSERT INTO Ticket (type, price, availability, eventId) VALUES
+('Regular', 1000.00, TRUE, 1),
+('VIP', 2500.00, TRUE, 1),
+('Standard', 1500.00, TRUE, 2),
+('Premium', 3000.00, TRUE, 2),
+('Foodie Pass', 1200.00, TRUE, 3);
+
+-- ----------------------------
+-- Insert Payments
+-- ----------------------------
+INSERT INTO Payment (userId, amount, status, type) VALUES
+(4, 1000.00, 'Completed', 'Credit Card'),
+(5, 2500.00, 'Completed', 'PayPal'),
+(4, 1500.00, 'Pending', 'Credit Card'),
+(5, 3000.00, 'Completed', 'Cash'),
+(4, 1200.00, 'Completed', 'Credit Card');
+
+-- ----------------------------
+-- Insert AttendeeTickets
+-- ----------------------------
+INSERT INTO AttendeeTickets (userId, ticketId) VALUES
+(4, 1), -- Tom → Regular Ticket for Event 1
+(5, 2), -- Sara → VIP Ticket for Event 1
+(4, 3), -- Tom → Standard Ticket for Event 2
+(5, 4), -- Sara → Premium Ticket for Event 2
+(4, 5); -- Tom → Foodie Pass for Event 3

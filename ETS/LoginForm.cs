@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace ETS
@@ -21,6 +16,13 @@ namespace ETS
         {
             string username = txtUsername.Text.Trim();  // This is actually email
             string password = txtPassword.Text;
+
+            // Email format validation using regex
+            if (!Regex.IsMatch(username, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Invalid Email Format", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             Database db = new Database();
             string query = $"SELECT * FROM Users WHERE email = '{username}'";
@@ -85,11 +87,6 @@ namespace ETS
             RegisterForm registerForm = new RegisterForm();
             registerForm.Show();
             this.Hide();
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace ETS
@@ -19,8 +14,22 @@ namespace ETS
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string username = txtNewUsername.Text.Trim(); // Used as email
+            string username = txtNewUsername.Text.Trim(); // Used as both name and email
             string password = txtNewPassword.Text;
+
+            // Email format validation
+            if (!Regex.IsMatch(username, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Name validation (should not contain numbers)
+            if (Regex.IsMatch(username, @"\d"))
+            {
+                MessageBox.Show("Username (name/email) should not contain numbers.", "Invalid Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             Database db = new Database();
 
@@ -58,7 +67,6 @@ namespace ETS
                 MessageBox.Show("Error during registration: " + ex.Message);
             }
         }
-
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
