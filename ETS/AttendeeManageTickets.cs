@@ -23,7 +23,6 @@ namespace ETS
         private void GoBackButton_Click(object sender, EventArgs e)
         {
             AttendeeUI attendeeUI = new AttendeeUI(loggedInUserId);
-            MessageBox.Show($"{loggedInUserId}");
             attendeeUI.Show();
             this.Hide();
         }

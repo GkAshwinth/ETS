@@ -45,6 +45,7 @@
             this.AvailableEventsDataGrid.ReadOnly = true;
             this.AvailableEventsDataGrid.RowHeadersWidth = 51;
             this.AvailableEventsDataGrid.RowTemplate.Height = 24;
+            this.AvailableEventsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.AvailableEventsDataGrid.Size = new System.Drawing.Size(505, 275);
             this.AvailableEventsDataGrid.TabIndex = 0;
             // 

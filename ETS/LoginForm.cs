@@ -58,7 +58,7 @@ namespace ETS
                         }
                         else if (role == "EventManager")
                         {
-                            new EventOrganizerForm().Show();
+                            //new EventOrganizerForm().Show();
                         }
                         else
                         {

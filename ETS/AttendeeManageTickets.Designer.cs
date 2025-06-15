@@ -46,6 +46,7 @@
             this.MyTicketsDataGrid.ReadOnly = true;
             this.MyTicketsDataGrid.RowHeadersWidth = 51;
             this.MyTicketsDataGrid.RowTemplate.Height = 24;
+            this.MyTicketsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MyTicketsDataGrid.Size = new System.Drawing.Size(505, 275);
             this.MyTicketsDataGrid.TabIndex = 1;
             // 
