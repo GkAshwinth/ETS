@@ -2,38 +2,51 @@
 {
     partial class AdminTrackSalesForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.DataGridView dataGridViewSales;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dataGridViewSales = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridViewSales
+            // 
+            this.dataGridViewSales.AllowUserToAddRows = false;
+            this.dataGridViewSales.AllowUserToDeleteRows = false;
+            this.dataGridViewSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSales.Location = new System.Drawing.Point(20, 20);
+            this.dataGridViewSales.Name = "dataGridViewSales";
+            this.dataGridViewSales.ReadOnly = true;
+            this.dataGridViewSales.RowHeadersVisible = false;
+            this.dataGridViewSales.RowTemplate.Height = 25;
+            this.dataGridViewSales.Size = new System.Drawing.Size(740, 400);
+            this.dataGridViewSales.TabIndex = 0;
+            // 
+            // AdminTrackSalesForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "AdminTrackSalesForm";
+            this.ClientSize = new System.Drawing.Size(780, 450);
+            this.Controls.Add(this.dataGridViewSales);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "AdminTrackSalesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Sales Report";
+            this.Load += new System.EventHandler(this.AdminTrackSalesForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).EndInit();
+            this.ResumeLayout(false);
         }
-
-        #endregion
     }
 }
