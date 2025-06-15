@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ets\\attendeeviewandregisterui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\attendeeviewandregisterui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ets\\attendeeviewandregisterui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\attendeeviewandregisterui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ets\\attendeemanagetickets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\attendeemanagetickets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ets\\attendeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\attendeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,18 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ets\\attendeemanagetickets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\attendeemanagetickets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ets\\attendeemanagetickets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\attendeemanagetickets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ets\\attendeeviewandregisterui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\attendeeviewandregisterui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ets\\attendeeviewandregisterui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|solutionrelative:ets\\attendeeviewandregisterui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EBA6573-46CA-436D-91D9-410B5F5D17C7}|ETS\\ETS.csproj|c:\\users\\user\\onedrive\\desktop\\event tracking system\\ets\\ets\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,21 +66,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ETS\\Database.cs",
-              "RelativeDocumentMoniker": "ETS\\Database.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ETS\\Database.cs",
-              "RelativeToolTip": "ETS\\Database.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAmwFAAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T08:59:50.193Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -103,20 +90,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ETS\\Database.cs",
+              "RelativeDocumentMoniker": "ETS\\Database.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ETS\\Database.cs",
+              "RelativeToolTip": "ETS\\Database.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAmwFAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T08:59:50.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AttendeeController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ETS\\AttendeeController.cs",
               "RelativeDocumentMoniker": "ETS\\AttendeeController.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ETS\\AttendeeController.cs",
               "RelativeToolTip": "ETS\\AttendeeController.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAF8AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAuwHsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T18:40:03.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "AttendeeViewAndRegisterUI.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ETS\\AttendeeViewAndRegisterUI.cs",
               "RelativeDocumentMoniker": "ETS\\AttendeeViewAndRegisterUI.cs",
@@ -128,20 +128,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "AttendeeViewAndRegisterUI.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ETS\\AttendeeViewAndRegisterUI.cs",
               "RelativeDocumentMoniker": "ETS\\AttendeeViewAndRegisterUI.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ETS\\AttendeeViewAndRegisterUI.cs",
               "RelativeToolTip": "ETS\\AttendeeViewAndRegisterUI.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAmwFQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAUwD8AAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T20:19:14.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AttendeeManageTickets.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ETS\\AttendeeManageTickets.cs",
               "RelativeDocumentMoniker": "ETS\\AttendeeManageTickets.cs",
@@ -153,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AttendeeManageTickets.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Event Tracking System\\ETS\\ETS\\AttendeeManageTickets.cs",
               "RelativeDocumentMoniker": "ETS\\AttendeeManageTickets.cs",

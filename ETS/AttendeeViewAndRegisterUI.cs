@@ -62,8 +62,6 @@ namespace ETS
 
                     if (success)
                         MessageBox.Show("Successfully registered for the event!");
-                    else
-                        MessageBox.Show("Failed to register. Please try again.");
                 }
                 else
                 {
