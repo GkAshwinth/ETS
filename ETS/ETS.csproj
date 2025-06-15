@@ -98,6 +98,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTrackSalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrackSalesForm.Designer.cs">
+      <DependentUpon>AdminTrackSalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViewEventsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViewEventsForm.Designer.cs">
+      <DependentUpon>AdminViewEventsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViewPaymentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViewPaymentsForm.Designer.cs">
+      <DependentUpon>AdminViewPaymentsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Attendee.cs" />
     <Compile Include="AttendeeController.cs" />
     <Compile Include="AttendeeManageTickets.cs">
@@ -140,6 +164,7 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="AttendeeManageTickets.resx">
       <DependentUpon>AttendeeManageTickets.cs</DependentUpon>
     </EmbeddedResource>

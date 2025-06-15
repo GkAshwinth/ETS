@@ -45,10 +45,20 @@ namespace ETS
                         {
                             new AttendeeUI(loggedInUserId).Show();
                         }
+                        else if (role == "Admin")
+                        {
+                            int id = Convert.ToInt32(result.Rows[0]["id"]);
+                            string name = result.Rows[0]["name"].ToString();
+                            string email = result.Rows[0]["email"].ToString();
+
+                            User loggedInUser = new User(id, name, email, role);
+                            new AdminForm(loggedInUser).Show();
+                        }
                         else
                         {
                             MessageBox.Show($"Logged in as {role}.");
                         }
+
                     }
                     else
                     {
