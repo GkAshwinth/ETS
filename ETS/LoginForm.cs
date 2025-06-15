@@ -54,6 +54,10 @@ namespace ETS
                             User loggedInUser = new User(id, name, email, role);
                             new AdminForm(loggedInUser).Show();
                         }
+                        else if (role == "EventManager")
+                        {
+                            new EventOrganizerForm().Show();
+                        }
                         else
                         {
                             MessageBox.Show($"Logged in as {role}.");
