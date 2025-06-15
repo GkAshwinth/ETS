@@ -19,11 +19,11 @@ namespace ETS
             connection = new Database();
         }
 
-        // View Events
+        // ✅ View Events
         public List<Event> GetAllEvents()
         {
             List<Event> events = new List<Event>();
-            string query = "SELECT * FROM Event";
+            string query = "SELECT * FROM event"; // lowercase table name
 
             try
             {
@@ -39,9 +39,8 @@ namespace ETS
                             Name = reader["name"].ToString(),
                             Date = Convert.ToDateTime(reader["date"]),
                             Location = reader["location"].ToString(),
-                            Description = reader["description"].ToString()
-                        }
-                        );
+                            AvailableTickets = Convert.ToInt32(reader["noOfTickets"]) // ✅ noOfTickets replaces Description
+                        });
                     }
                 }
             }
@@ -57,6 +56,7 @@ namespace ETS
             return events;
         }
 
+        // ✅ Register for event
         public bool RegisterForEvent(int userId, int ticketId)
         {
             string query = $"INSERT INTO AttendeeTickets (userId, ticketId) VALUES ({userId}, {ticketId})";
@@ -71,6 +71,8 @@ namespace ETS
                 return false;
             }
         }
+
+        // ✅ Unregister from event
         public bool UnregisterFromEvent(int userId, int ticketId)
         {
             string query = $"DELETE FROM AttendeeTickets WHERE userId = {userId} AND ticketId = {ticketId}";
@@ -86,6 +88,7 @@ namespace ETS
             }
         }
 
+        // ✅ Get ticket ID by Event
         public int? GetTicketIdByEvent(int eventId)
         {
             string query = $"SELECT ticketId FROM Ticket WHERE eventId = {eventId} LIMIT 1";
@@ -97,22 +100,23 @@ namespace ETS
             }
             else
             {
-                return null; // No ticket found
+                return null;
             }
         }
 
+        // ✅ Get My Tickets
         public DataTable GetMyTickets(int userId)
         {
             string query = @"
-        SELECT 
-            e.name AS EventName,
-            t.type AS TicketType,
-            e.date AS EventDate,
-            t.price AS TicketPrice
-        FROM AttendeeTickets at
-        JOIN Ticket t ON at.ticketId = t.ticketId
-        JOIN Event e ON t.eventId = e.eventId
-        WHERE at.userId = " + userId;
+                SELECT 
+                    e.name AS EventName,
+                    t.type AS TicketType,
+                    e.date AS EventDate,
+                    t.price AS TicketPrice
+                FROM AttendeeTickets at
+                JOIN Ticket t ON at.ticketId = t.ticketId
+                JOIN event e ON t.eventId = e.eventId
+                WHERE at.userId = " + userId;
 
             return connection.ExecuteQuery(query);
         }

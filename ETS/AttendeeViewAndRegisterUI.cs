@@ -14,6 +14,7 @@ namespace ETS
     {
         AttendeeController attendeeController = new AttendeeController();
         private int loggedInUserId;
+
         public AttendeeViewAndRegisterUI(int UserId)
         {
             InitializeComponent();
@@ -29,11 +30,11 @@ namespace ETS
             dt.Columns.Add("Name", typeof(string));
             dt.Columns.Add("Date", typeof(DateTime));
             dt.Columns.Add("Location", typeof(string));
-            dt.Columns.Add("Description", typeof(string));
+            dt.Columns.Add("AvailableTickets", typeof(int));
 
             foreach (var evt in events)
             {
-                dt.Rows.Add(evt.EventID, evt.Name, evt.Date, evt.Location, evt.Description);
+                dt.Rows.Add(evt.EventID, evt.Name, evt.Date, evt.Location, evt.AvailableTickets);
             }
 
             AvailableEventsDataGrid.DataSource = dt;
@@ -43,7 +44,6 @@ namespace ETS
         private void GoBackButton_Click(object sender, EventArgs e)
         {
             AttendeeUI attendeeUI = new AttendeeUI(loggedInUserId);
-            MessageBox.Show($"{loggedInUserId}");
             attendeeUI.Show();
             this.Hide();
         }
